@@ -1,0 +1,48 @@
+<html>
+<script>
+function dupa(){
+const imie=document.getElementById("imie").value;
+const rozmiars=document.getElementById("rozmiar").value;
+const markas=document.getElementById("marka").value;
+const markacz=document.getElementById("czapka").value;
+function show()
+{
+    console.log(`masz na imie ${this.name} masz spodnie marki: ${this.ciuch.spodnie.marka} w rozmiarze ${this.ciuch.spodnie.rozmiar} twoja czapka jest marki: ${this.ciuch.czapka.marka1} `);
+}
+const person = {
+    name: imie,
+
+    ciuch: {
+
+        spodnie:{
+        marka: markas,
+        rozmiar: rozmiars,
+        },
+
+        czapka: {
+            marka1: markacz,
+        },
+
+        
+    },
+
+showText: show,
+}
+person.showText();
+}
+</script>
+        Podaj imie:<br>
+        <input type="text" id="imie">
+        <br>
+        <br>
+        Podaj rozmiar spodni:<br>
+        <input type="text" id="rozmiar">
+        <br>
+        Podaj marke spodni:<br>
+        <input type="text" id="marka">
+        <br><br>
+        Podaj marke czapki:<br>
+        <input type="text" id="czapka">
+        <br><br>
+        <button onclick="dupa()">wyślij</button>
+</html>
